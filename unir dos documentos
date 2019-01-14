@@ -1,0 +1,8 @@
+for $t in  doc("Biblioteca.xml")//libro,
+$e in doc("Prestamos.xml")//entrada
+where $t/titulo=$e/titulo
+order by $e/prestamo/inicio
+return 
+       <prestamo>
+       {$t/titulo, $t/autor/*, $e/prestamo/inicio, $e/prestamo/devolucion}
+       </prestamo>
