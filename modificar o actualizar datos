@@ -3,3 +3,9 @@ with "Profe"
 ,
 replace value of node //Bailes/baile[1]/plazas
 with 200
+---tambien se puede modificar mediante id---
+replace value of node //Bailes/baile[@id=7]/profesor
+with "Profeeee"
+,
+replace value of node //Bailes/baile[@id=7]/plazas
+with 200
