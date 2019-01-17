@@ -1,0 +1,20 @@
+mostrar el titulo y el autor de los libros del año 2005
+-------------------------------------------------------
+for $libro in /bookstore/book
+where $libro/year=2005
+return 
+ <lib2005>
+   <title>{$libro/title/text(),$libro/author}</title> 
+ </lib2005>
+ 
+ --------------------------------------------------------
+ <----------------otra forma de hacerlo----------------->
+ --------------------------------------------------------
+ 
+ for $libro in /bookstore/book
+where $libro/year=2005
+return 
+ <lib2005>
+   <title>{$libro/title/text()}</title> 
+   <author>{$libro/author/text()}</author>
+ </lib2005>
