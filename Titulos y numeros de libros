@@ -1,0 +1,11 @@
+mostrar los titulos de los libros
+y que al final exista una etiqueta con el total de libros
+
+let $total := count(//bookstore/book),
+    $titulos:= (
+      for $libro in //bookstore/book/title
+      return <titulos>{$libro/text()}</titulos>)
+return <resultado>
+           {$titulos}
+           <total>{$total}</total>
+       </resultado>
