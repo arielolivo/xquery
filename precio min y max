@@ -1,0 +1,11 @@
+Mostrar el precio minimo y maximo de los libros
+-------------------------------------------------
+-------------------------------------------------
+
+let $max := max(//bookstore/book/price)
+let $min := min(//bookstore/book/price)
+return
+<libro>
+ <min> {$min} </min>
+ <max> {$max}</max>
+ </libro
