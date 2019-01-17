@@ -1,0 +1,2 @@
+let $numero := count(//bookstore/book)
+return <total>$numero</total>
