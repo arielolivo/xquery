@@ -1,0 +1,3 @@
+for $tit in //bookstore/book/title/text()
+return <titulo>{$tit}</titulo>
+<----text()para que solo aparezca el texto--->
