@@ -3,3 +3,7 @@ cque muestre los libros que tengan precio menor a 30
 for $libro in //bookstore/book
 where $libro/price <=30
 return $libro
+-------------------------------------
+for $libro in //bookstore/book[price<=30]
+return $libro
+<----lo mismo pero mas comprimido----->
