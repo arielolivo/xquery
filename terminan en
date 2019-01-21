@@ -1,0 +1,4 @@
+for $libros in //bookstore/book
+where ends-with ($libros/year,"3")
+return
+<libro> {$libros/title/text()} </libro>
