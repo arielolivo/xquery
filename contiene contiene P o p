@@ -1,0 +1,9 @@
+Mostrar los libros cuya categoria empiece por c y 
+que tengan una p mayscula o misnuscula en titulo
+---------------------------------------------------->>>>
+---------------------------------------------------->>>>
+for $libros in //bookstore/book
+where starts-with($libros/@category,"C")
+and contains(lower-case($libros/title),"p")
+return
+<libro> {$libros/title/text()} </libro>
